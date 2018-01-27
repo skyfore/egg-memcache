@@ -1,22 +1,10 @@
 # egg-memcache
 
 [![NPM version][npm-image]][npm-url]
-[![build status][travis-image]][travis-url]
-[![Test coverage][codecov-image]][codecov-url]
-[![David deps][david-image]][david-url]
-[![Known Vulnerabilities][snyk-image]][snyk-url]
 [![npm download][download-image]][download-url]
 
 [npm-image]: https://img.shields.io/npm/v/egg-memcache.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/egg-memcache
-[travis-image]: https://img.shields.io/travis/eggjs/egg-memcache.svg?style=flat-square
-[travis-url]: https://travis-ci.org/eggjs/egg-memcache
-[codecov-image]: https://img.shields.io/codecov/c/github/eggjs/egg-memcache.svg?style=flat-square
-[codecov-url]: https://codecov.io/github/eggjs/egg-memcache?branch=master
-[david-image]: https://img.shields.io/david/eggjs/egg-memcache.svg?style=flat-square
-[david-url]: https://david-dm.org/eggjs/egg-memcache
-[snyk-image]: https://snyk.io/test/npm/egg-memcache/badge.svg?style=flat-square
-[snyk-url]: https://snyk.io/test/npm/egg-memcache
 [download-image]: https://img.shields.io/npm/dm/egg-memcache.svg?style=flat-square
 [download-url]: https://npmjs.org/package/egg-memcache
 
@@ -60,10 +48,10 @@ see [memcached API](https://github.com/3rd-Eden/memcached) for more detail.
 module.exports = (app) => {
   const store = {
     set(key, value, lifetime) {
-      return app.memcache.setAsync(key, value, lifetime);
+      return app.memcached.setAsync(key, value, lifetime);
     },
     get(key) {
-      return app.memcache.getAsync(key);
+      return app.memcached.getAsync(key);
     }
   }
 };
