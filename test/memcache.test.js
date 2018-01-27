@@ -5,7 +5,7 @@ const request = require('supertest');
 const mm = require('egg-mock');
 const uuid = require('uuid/v4');
 
-describe('test/mongoose.test.js', () => {
+describe('test/memcache.test.js', () => {
   let app;
   const key = uuid();
   const value = uuid();
