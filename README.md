@@ -59,11 +59,11 @@ module.exports = (app) => {
 //  {app_root}/controller/index.js
 class IndexController extends Controller {
   * setKey() {
-    yield this.service.store.set('key', 'value', 0);
+    yield this.ctx.service.store.set('key', 'value', 0);
   }
   
   * getKey() {
-    const key = yield this.service.store.get('key');
+    const key = yield this.ctx.service.store.get('key');
   }
 }
 
